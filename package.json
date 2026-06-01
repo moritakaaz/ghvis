@@ -1,0 +1,58 @@
+{
+  "name": "ghvis",
+  "version": "1.0.0",
+  "description": "Interactive CLI tool to bulk-change GitHub repository visibility (public ↔ private)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "ghvis": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "github",
+    "repository",
+    "visibility",
+    "cli",
+    "bulk",
+    "private",
+    "public",
+    "interactive"
+  ],
+  "author": "moritakaaz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moritakaaz/ghvis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moritakaaz/ghvis/issues"
+  },
+  "homepage": "https://github.com/moritakaaz/ghvis#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.5.2",
+    "@octokit/rest": "^22.0.1",
+    "commander": "^15.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@types/node": "^25.9.1",
+    "husky": "^9.1.7",
+    "standard-version": "^9.5.0",
+    "typescript": "^6.0.3"
+  }
+}
