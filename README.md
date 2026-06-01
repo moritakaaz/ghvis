@@ -49,9 +49,27 @@ gh auth login
 ghvis
 ```
 
-### Personal Access Token
+### Personal Access Token (PAT)
 
-If `gh` CLI is not available, you will be prompted to enter a PAT directly in the terminal. The token requires the `repo` scope for full repository access.
+If `gh` CLI is not available, you will be prompted to enter a PAT directly in the terminal.
+
+**How to get a PAT:**
+
+1. Go to [GitHub Token Settings](https://github.com/settings/tokens)
+2. Click **"Generate new token"** → **"Generate new token (classic)"**
+3. Fill in:
+   - **Note**: `ghvis` (or any label you prefer)
+   - **Expiration**: choose based on your needs (30 days, 90 days, or no expiration)
+   - **Scopes**: check **`repo`** (full control of private repositories)
+4. Click **"Generate token"**
+5. Copy the token (starts with `ghp_`) — it is only shown once
+
+Then run `ghvis` and paste the token when prompted:
+
+```
+$ ghvis
+? Enter your GitHub Personal Access Token (PAT): ghp_xxxxxxxxxxxx
+```
 
 The token is only held in memory during the session and is never written to disk.
 

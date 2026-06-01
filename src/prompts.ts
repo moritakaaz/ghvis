@@ -48,6 +48,13 @@ export async function promptSelectRepos(
       value: repo,
     })),
     pageSize: 20,
+    theme: {
+      icon: {
+        checked: '[x]',
+        unchecked: '[ ]',
+        cursor: '>',
+      },
+    },
   });
 
   return selected;
