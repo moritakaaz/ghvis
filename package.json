@@ -1,6 +1,6 @@
 {
   "name": "ghvis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interactive CLI tool to bulk-change GitHub repository visibility (public ↔ private)",
   "type": "module",
   "main": "./dist/index.js",
